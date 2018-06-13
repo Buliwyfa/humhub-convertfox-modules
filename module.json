@@ -1,0 +1,10 @@
+{
+    "id": "convertfox",
+    "name": "Convertfox",
+    "description": "Communicate with your customers through Convertfox!",
+    "keywords": ["convertfox"],
+    "version": "1.0.0-beta1",
+    "humhub": {
+    "minVersion": "1.0"
+    }
+}
