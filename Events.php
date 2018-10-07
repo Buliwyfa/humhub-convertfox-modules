@@ -6,7 +6,7 @@ use yii\helpers\Url;
 use humhub\modules\convertfox\widgets\ConvertfoxFrame;
 use humhub\models\Setting;
 
-class Events extends \yii\base\Object
+class Events extends \yii\base\BaseObject
 {
 
     public static function onAdminMenuInit(\yii\base\Event $event)
@@ -26,8 +26,8 @@ public static function addConvertfoxFrame($event)
         if (Yii::$app->user->isGuest) {
             return;
         }
-        $event->sender->view->registerAssetBundle(Assets::className());
-        $event->sender->addWidget(ConvertfoxFrame::className(), [], [
+        $event->sender->view->registerAssetBundle(Assets::class);
+        $event->sender->addWidget(ConvertfoxFrame::class, [], [
             'sortOrder' => Setting::Get('timeout', 'convertfox')
         ]);
     }
